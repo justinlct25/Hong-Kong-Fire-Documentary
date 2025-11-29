@@ -21,7 +21,7 @@ This section compiles news reports, feature articles, and official releases from
 
 ## International Media
 
-- [**BBC UK**](BBC/readme.md)
+- [**BBC UK**](BBC/Readme.md)
 - [**CNN**](CNN/Readme.md)
 - [**Japan Times**](Japan%20Times/Readme.md)
 - [**SCMP (South China Morning Post)**](SCMP/Readme.md)
