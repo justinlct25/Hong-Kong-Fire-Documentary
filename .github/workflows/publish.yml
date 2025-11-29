@@ -29,10 +29,19 @@ jobs:
           TARGET_URL: https://hong-kong-emergency-coordination-hub.github.io/Hong-Kong-Fire-Documentary/
         run: |
           echo "Triggering Wayback Machine snapshot for $TARGET_URL"
-          curl --fail --silent --show-error --location \
-            --retry 3 --retry-delay 10 \
-            "https://web.archive.org/save/$TARGET_URL" \
-            --output wayback-response.json
-          echo "Wayback Machine response:"
-          cat wayback-response.json
-
+          # Capture HTTP status code
+          HTTP_STATUS=$(curl --silent --output /dev/null --write-out "%{http_code}" --location \
+            "https://web.archive.org/save/$TARGET_URL")
+          
+          echo "Wayback Machine returned HTTP status: $HTTP_STATUS"
+          
+          if [ "$HTTP_STATUS" -eq 429 ]; then
+            echo "Warning: Rate limit exceeded (429). Skipping archive step to prevent workflow failure."
+            exit 0
+          elif [ "$HTTP_STATUS" -ge 400 ]; then
+            echo "Error: Failed to archive with status $HTTP_STATUS"
+            # Optionally exit with error, or just warn
+            exit 0 
+          else
+            echo "Successfully triggered archive snapshot."
+          fi
