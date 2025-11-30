@@ -1,5 +1,7 @@
 # Changelog
 
+> Latest commit: 62056e6 (2025-11-30 16:21:31) - infra: Add CODEOWNERS and workflow to auto-request @heilcheng as reviewer
+
 ## heilcheng
 
 自動化修復整個倉庫的 Markdown Lint 問題。
@@ -25,6 +27,17 @@ Automated markdown linting fixes throughout the repository.
 倉庫維護：合併 PR、整理檔案與更新文件。
 Repository maintenance, merging pull requests, file organization, and documentation updates.
 
+- (2025-11-30 13:39:19) [2b269a8] refactor: Reorganize international news structure (Issue #105) (#111)
+- (2025-11-30 13:20:07) [e096328] refactor: Reorganize international news structure (Issue #105) (#110)
+- (2025-11-30 13:13:37) [66a1543] feat: Add Citation and Contact to navigation bar and bilingual support (#109)
+- (2025-11-30 13:07:16) [cdd5ea7] feat: add citation and contact information (#108)
+- (2025-11-30 13:04:47) [4f8adb7] docs: add technical papers to English analysis README (#107)
+- (2025-11-30 13:03:31) [aa1922f] feat: add renovation documents and financial briefings (Issue #43, #44) (#106)
+- (2025-11-30 12:59:41) [df606c6] feat: add FactWire building maintenance database (Issue #41) (#104)
+- (2025-11-30 12:57:11) [58da59c] feat: add Ta Kung Pao article and PDF link (Issue #96) (#103)
+- (2025-11-30 12:55:14) [b916f75] feat: add Tagesschau news entries from Issue #97 (#102)
+- (2025-11-30 12:51:11) [838d4fc] docs: add license and citation info to README (#101)
+- (2025-11-30 12:47:27) [f3acfb4] fix: CI auto-commit error and timeline update (#100)
 - (2025-11-29 21:02:15) [94e7c56] Merge pull request #51 from VansonLeung/feat/20251129-header-menu-localization
 - (2025-11-29 20:55:36) [f53c8c9] Merge pull request #50 from nessgor/main
 - (2025-11-29 20:46:37) [a7aaf3c] Merge pull request #49 from TimothyHo/main
@@ -89,6 +102,8 @@ Added comprehensive video documentation, collection guides, and meeting minutes 
 導入 MkDocs 設定、多語系支援與文件架構，並後續套用 CC BY-SA 授權與修復 Wayback 429 失敗。
 Implemented MkDocs configuration, multi-language support, documentation structure, applied CC BY-SA licensing, and fixed Wayback 429 failures.
 
+- (2025-11-30 16:21:31) [62056e6] infra: Add CODEOWNERS and workflow to auto-request @heilcheng as reviewer
+- (2025-11-30 16:17:53) [603bc6f] feat: Add Mingpao URL scraper and updates (Resolve #119)
 - (2025-11-29 20:39:00) [434c4e3] Fix CI failure: Handle 429 Too Many Requests from Wayback Machine gracefully
 - (2025-11-29 19:52:41) [3b836cb] Restore detailed README.md and remove LICENSE file
 - (2025-11-29 16:58:25) [b648aa2] Apply CC BY-SA 4.0 License
@@ -162,6 +177,9 @@ Markdown linting fixes.
 新增多個本地與國際新聞條目。
 Added news articles from multiple international and local sources.
 
+- (2025-11-30 16:14:36) [2b57cfd] fix typo
+- (2025-11-30 16:08:40) [bda9d9a] update Buildings Department file path and add 消防安全改善工程的註冊消防裝置承辦商名單
+- (2025-11-30 15:32:09) [d0c85f6] remove duplicate news/大公報/archive/a7-宏福苑五級火-搭棚 ,as it has been in content/news/大公文匯/archive/【A7-宏福苑五級火-搭棚
 - (2025-11-29 05:12:03) [9d23f6e] 東方日報
 - (2025-11-29 03:50:55) [22366db] Japan Times
 - (2025-11-29 03:37:06) [b8ddc87] CNN
@@ -177,6 +195,7 @@ Added news articles from multiple international and local sources.
 更新 11 月 29 日事件時間線。
 Timeline updates with November 29 events.
 
+- (2025-11-30 15:59:56) [46ae1ce] add: 新增2025年11月29日大埔宏福苑大火事件的最新時間綫，包括受影響居民的安置情況
 - (2025-11-29 10:52:44) [21270e2] add: Add Nov 29 events
 
 ## chris-moming4k
@@ -194,6 +213,7 @@ Added and organized meeting minutes documentation.
 新增火災事件時間線。
 Added fire incident timeline.
 
+- (2025-11-30 13:57:43) [fdd81ed] modify timeline for Nov 29 (#112)
 - (2025-11-29 06:27:06) [552c423] add fire-linear-timeline
 
 ## Vanson Leung
@@ -201,6 +221,7 @@ Added fire incident timeline.
 增設 Wayback Machine 自動封存、同步雙語變更記錄，並讓網站頁首支援中英文。
 Added Wayback archival workflow, synchronized bilingual changelog wording, and localized the site header.
 
+- (2025-11-30 12:48:42) [bdc4170] Feat/20251129 licence (#40)
 - (2025-11-29 20:58:07) [8d19b37] header toolbar localization
 - (2025-11-29 19:43:53) [acd03e6] add wayback machine workflow
 - (2025-11-29 19:43:21) [8e1b519] changelogs bilingual
@@ -218,6 +239,7 @@ Added Commercial Radio news coverage and synced with upstream main.
 釐清 README 內容，讓使用者更易理解。
 Clarified README wording for better reader understanding.
 
+- (2025-11-30 14:15:28) [c1a5856] Clarify repository intent
 - (2025-11-29 20:11:15) [e9ad180] Clarify the readme
 
 ## TimothyHo
