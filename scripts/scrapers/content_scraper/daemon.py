@@ -540,6 +540,8 @@ def get_open_pr() -> dict | None:
     """Check if there's an existing open PR from fork's main branch using gh CLI"""
     fork_owner = get_fork_owner()
 
+    # Search by author and filter by head branch name
+    # (--head with fork:branch format doesn't work reliably for cross-fork PRs)
     result = run_cmd(
         [
             "gh",
@@ -547,22 +549,22 @@ def get_open_pr() -> dict | None:
             "list",
             "--repo",
             UPSTREAM_REPO,
-            "--head",
-            f"{fork_owner}:{MAIN_BRANCH}",
+            "--author",
+            fork_owner,
             "--state",
             "open",
             "--json",
-            "number,url",
-            "--limit",
-            "1",
+            "number,url,headRefName",
         ],
         check=False,
     )
 
     if result.returncode == 0 and result.stdout.strip():
         prs = json.loads(result.stdout)
-        if prs:
-            return prs[0]
+        # Filter to PRs from main branch
+        for pr in prs:
+            if pr.get("headRefName") == MAIN_BRANCH:
+                return {"number": pr["number"], "url": pr["url"]}
     return None
 
 
